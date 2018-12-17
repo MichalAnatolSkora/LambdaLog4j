@@ -3,8 +3,8 @@ package test.java;
 import junit.framework.TestCase;
 import main.java.Logger;
 
-class LoggerTest extends TestCase {
-    void testTechnicalMessage() {
+public class LoggerTest extends TestCase {
+    public void testTechnicalMessage() {
         Logger logger = new Logger(getClass().getName());
         logger.Log(e -> e.Info()
                 .CorrelationId("fakeCorrelationId")
@@ -13,7 +13,7 @@ class LoggerTest extends TestCase {
                 .Field("Method", "testMessage"));
     }
 
-    void testException() {
+    public void testException() {
         Logger logger = new Logger(getClass().getName());
         try {
             throw new Exception("New exception");
@@ -26,7 +26,7 @@ class LoggerTest extends TestCase {
         }
     }
 
-    void testBusinessMessage() {
+    public void testBusinessMessage() {
         Logger logger = new Logger(getClass().getName());
         logger.Log(e -> e.Info()
                 .CorrelationId("fakeCorrelationId")

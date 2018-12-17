@@ -1,7 +1,7 @@
 package main.java;
 
 public class LogsBuilder implements LevelLogsBuilder, ContextLogsBuilder, TypeLogsBuilder {
-    private BuilderEventsHolder builderEventsHolder;
+    private BuilderEventsHolder builderEventsHolder = new BuilderEventsHolder();
     private LogLevel logLevel;
 
     public LogsBuilder Info() {

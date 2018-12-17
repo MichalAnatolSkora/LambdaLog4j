@@ -10,9 +10,9 @@ public class Logger {
         // use Log4j at this level
     }
 
-    public void Log(Function<FirstBuilder, NextBuilder> func) {
-        FirstBuilder firstBuilder = new FirstBuilder();
-        NextBuilder builder = func.apply(firstBuilder);
+    public void Log(Function<LevelLogsBuilder, LogsBuilder> func) {
+        LogsBuilder firstBuilder = new LogsBuilder();
+        LogsBuilder builder = func.apply(firstBuilder);
         builder.Generate(); // TODO Log it with log4j
     }
 }
